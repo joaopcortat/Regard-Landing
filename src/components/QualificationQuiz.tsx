@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronRight, Calendar, DollarSign, Package, Users, Check } from 'lucide-react';
 import { cn } from '../utils';
 import { WaitlistSuccess } from './WaitlistSuccess';
-import { supabase } from '../lib/supabase';
+
 
 interface QualificationQuizProps {
     isOpen: boolean;

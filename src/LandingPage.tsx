@@ -1,11 +1,8 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { motion, useScroll, useTransform, useMotionValue, useSpring } from 'framer-motion';
-import { cn } from './utils'; // Assuming basic utils exist or will be inline if creating new
+import React, { useRef, useState } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 // Simple fallback for clsx/tailwind-merge if not in utils yet
-function classNames(...classes: (string | undefined | null | false)[]) {
-    return classes.filter(Boolean).join(' ');
-}
+
 
 import { QualificationQuiz } from './components/QualificationQuiz';
 import { Key } from 'lucide-react';

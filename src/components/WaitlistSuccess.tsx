@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
-import { Instagram, Share2, Copy } from 'lucide-react';
-import { cn } from '../utils';
+import { Instagram } from 'lucide-react';
+
 
 interface WaitlistSuccessProps {
     userName: string;
