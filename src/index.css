@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* 
+      Theme: European Clinical Luxury
+      Base: Deep Graphite
+      Accent: Surgical Blue
+    */
+
+    /* Backgrounds */
+    --background: 240 6% 4%;
+    /* #09090b (Zinc-950) */
+    --foreground: 240 5% 96%;
+    /* #f4f4f5 (Zinc-100) */
+
+    --card: 240 4% 8%;
+    /* #121214 (Zinc-900) */
+    --card-foreground: 240 5% 96%;
+
+    --popover: 240 4% 8%;
+    --popover-foreground: 240 5% 96%;
+
+    /* Brand Colors */
+    --primary: 217 91% 60%;
+    /* #3b82f6 (Blue-500) */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 4% 16%;
+    /* Zinc-800 */
+    --secondary-foreground: 240 5% 96%;
+
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 65%;
+    /* #a1a1aa (Zinc-400) */
+
+    --accent: 240 4% 16%;
+    --accent-foreground: 240 5% 96%;
+
+    --destructive: 346 87% 60%;
+    /* #f43f5e (Rose-500) */
+    --destructive-foreground: 0 0% 100%;
+
+    /* Functional Colors */
+    --success: 151 55% 42%;
+    /* #10b981 (Emerald-500) */
+    --warning: 45 93% 47%;
+    /* #f59e0b (Amber-500) */
+
+    /* Borders & Inputs */
+    --border: 240 4% 16%;
+    /* #27272a (Zinc-800) */
+    --input: 240 4% 16%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+    /* rounded-xl */
+
+    /* Legacy/Custom Variables Mapping */
+    --dash-bg: 240 6% 4%;
+    --dash-card: 240 4% 8%;
+    --dash-border: 240 4% 16%;
+    --dash-mute: 240 5% 65%;
+    --dash-primary: 217 91% 60%;
+  }
+
+  .dark {
+    --background: 240 6% 4%;
+    --foreground: 240 5% 96%;
+    --card: 240 4% 8%;
+    --card-foreground: 240 5% 96%;
+    --popover: 240 4% 8%;
+    --popover-foreground: 240 5% 96%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 240 5% 96%;
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 65%;
+    --accent: 240 4% 16%;
+    --accent-foreground: 240 5% 96%;
+    --destructive: 346 87% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 4% 16%;
+    --input: 240 4% 16%;
+    --ring: 217 91% 60%;
+
+    --dash-bg: 240 6% 4%;
+    --dash-card: 240 4% 8%;
+    --dash-border: 240 4% 16%;
+    --dash-mute: 240 5% 65%;
+    --dash-primary: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  ::selection {
+    background-color: #3b82f6;
+    color: white;
+  }
+}
+
+/* Scrollbar refinement */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+@layer utilities {
+  .btn-primary {
+    @apply bg-[#3b82f6] hover:bg-[#2563eb] text-white shadow-[inset_0_1px_0_rgba(255, 255, 255, 0.2)] transition-all active:scale-95;
+  }
+
+  .glass-card {
+    @apply border border-white/5 bg-[#121214] shadow-lg shadow-black/40 relative overflow-hidden;
+  }
+
+  .glass-edge {
+    @apply absolute inset-x-0 top-0 h-px bg-white/10 pointer-events-none;
+  }
+
+  .kpi-value {
+    @apply font-variant-numeric tabular-nums tracking-tight;
+  }
+
+  .kpi-label {
+    @apply text-xs uppercase tracking-wider text-[#a1a1aa] font-medium;
+  }
+}
