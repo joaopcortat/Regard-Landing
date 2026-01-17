@@ -86,8 +86,8 @@ export default function LandingPage() {
                         transition={{ delay: 1.6, duration: 1 }}
                         className="text-lg md:text-xl text-zinc-400 max-w-2xl leading-relaxed mb-12"
                     >
-                        O Sistema Operacional definitivo para clínicas de alta performance. <br />
-                        <span className="text-zinc-300">Exclusivo. Seguro. Invisível.</span>
+                        Clareza financeira absoluta para clínicas de alta performance. <br />
+                        <span className="text-zinc-300">Recupere seu faturamento. Exclusivo. Invisível.</span>
                     </motion.p>
 
                     {/* Magnetic CTA */}
