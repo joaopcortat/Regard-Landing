@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+@theme {
+    --color-background: #050505;
+    --color-foreground: #ffffff;
+    --color-cadran-blue: #2563eb;
+    --color-neon-blue: #60a5fa;
+}
+
+@layer utilities {
+    .bg-grid-pattern {
+        background-image: linear-gradient(to right, #ffffff05 1px, transparent 1px),
+            linear-gradient(to bottom, #ffffff05 1px, transparent 1px);
+        background-size: 40px 40px;
+    }
+
+    .glow-text {
+        text-shadow: 0 0 30px rgba(37, 99, 235, 0.6);
+    }
+}
